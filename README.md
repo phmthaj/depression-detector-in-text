@@ -53,12 +53,6 @@ Launch the interactive CLI tool. You can input custom text, and the model will a
 python scripts/predict.py
 ```
 ## 🐳 Docker
-
-Since you're a HUST student, having a professional English README.md is a great way to make your project stand out to instructors and on your GitHub profile.
-
-Here is the professional English version for your 🐳 Docker section:
-
-🐳 Docker
 Build Image
 To pack the environment and dependencies, run the following command in the project's root directory:
 

@@ -52,3 +52,41 @@ Launch the interactive CLI tool. You can input custom text, and the model will a
 ```bash
 python scripts/predict.py
 ```
+## 🐳 Docker
+
+Since you're a HUST student, having a professional English README.md is a great way to make your project stand out to instructors and on your GitHub profile.
+
+Here is the professional English version for your 🐳 Docker section:
+
+🐳 Docker
+Build Image
+To pack the environment and dependencies, run the following command in the project's root directory:
+
+```Bash
+docker build -t depression_app .
+```
+1. Run Container (with GPU Support)
+To utilize your GPU (e.g., RTX 4050) and sync your code between the host and the container, use the following command:
+
+```bash
+docker run --gpus all -it -v ${PWD}:/app depression_app /bin/bash
+```
+
+2. Execution Workflow
+Once you are inside the container (indicated by the root@...:/app# prompt), you can execute the project scripts in order:
+
+Train the model:
+
+```bash
+python scripts/train.py
+```
+Evaluate the model:
+
+```bash
+python scripts/evaluate.py
+```
+Run inference/prediction:
+
+```bash
+python scripts/predict.py
+```

@@ -1,17 +1,15 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
+# Chặn thư mục dữ liệu
+data/
 
-# Data & Models (Không nên up lên GitHub vì quá nặng)
-data/models/
-data/processed/
-dataset/
+# Chặn các file model đã huấn luyện xong
+*.pth
+*.h5
+*.weights
 
-# Virtual Environment
+# Chặn môi trường ảo nếu có
 venv/
 .env
 
-# OS
+# Chặn các file rác của hệ thống
+__pycache__/
 .DS_Store
-Thumbs.db

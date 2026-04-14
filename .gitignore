@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Models (Không nên up lên GitHub vì quá nặng)
+data/models/
+data/processed/
+dataset/
+
+# Virtual Environment
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

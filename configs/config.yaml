@@ -1,0 +1,31 @@
+project_name: "Mental-Health-Detection-PEFT"
+
+# Thông tin mô hình gốc
+model:
+  base_model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  max_seq_length: 512
+  num_labels: 2
+
+# Cấu hình LoRA (Có thể thay đổi r và alpha để thí nghiệm)
+lora:
+  r: 8
+  lora_alpha: 16
+  lora_dropout: 0.1
+  target_modules:
+    - "query"
+    - "key"
+    - "value"
+
+# Quản lý Dữ liệu
+data:
+  train_file: "dataset2024.csv"   # Dataset năm 2024 dùng để train
+  test_file: "2025set.csv"        # Dataset năm 2025 dùng để test/eval
+  val_split: 0.1
+  batch_size: 16
+
+# Tham số huấn luyện
+training:
+  epochs: 10
+  learning_rate: 5e-5
+  patience: 3
+  model_save_dir: "data/models/lora_bert_pipeline"
